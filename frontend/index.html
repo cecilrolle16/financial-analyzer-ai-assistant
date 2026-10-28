@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClarityIQ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <p class="mark">Your AI-powered financial review assistant</p>
+    <h1>ClarityIQ</h1>
+    <p class="tagline">Your Financial Documents. Finally, Clear.</p>
+    <p class="lede">
+      Upload a financial PDF and turn complex numbers into clear insights. Uncover key figures,
+      spot potential red flags, and discover actionable next steps—all in minutes.
+    </p>
+  </header>
+
+  <main>
+    <section class="panel" aria-labelledby="upload-heading">
+      <h2 id="upload-heading">Upload a document</h2>
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>What the review looks for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bank statements</td>
+            <td>Balances, fees, and overdrafts</td>
+          </tr>
+          <tr>
+            <td>Pay stubs</td>
+            <td>Wages, deductions, and pay period</td>
+          </tr>
+          <tr>
+            <td>Invoices and bills</td>
+            <td>Amount due, due date, and late fees</td>
+          </tr>
+          <tr>
+            <td>Tax forms</td>
+            <td>Income, withholding, and missing fields</td>
+          </tr>
+          <tr>
+            <td>Loan documents</td>
+            <td>Balance, interest, and past-due amounts</td>
+          </tr>
+          <tr>
+            <td>Credit-card statements</td>
+            <td>Charges, interest, and credit limit</td>
+          </tr>
+        </tbody>
+        <caption>
+          Similar PDFs are accepted too. Maximum 4.5 MB. The file is deleted from storage after the review.
+        </caption>
+      </table>
+      <form id="review-form">
+        <label class="drop" id="drop-zone" for="file">
+          <span id="file-label">Choose a PDF or drop it here</span>
+          <input id="file" name="file" type="file" accept="application/pdf,.pdf">
+        </label>
+        <button id="submit" type="submit" disabled>Review document</button>
+      </form>
+      <p id="status" class="status" role="status"></p>
+    </section>
+
+    <section id="results" class="results" hidden aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>
+      This is general information from an automated review of the uploaded document.
+      It is not financial, tax, legal, or investment advice.
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

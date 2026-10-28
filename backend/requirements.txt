@@ -1,0 +1,1 @@
+# The Lambda Python runtime already provides boto3 and botocore.
